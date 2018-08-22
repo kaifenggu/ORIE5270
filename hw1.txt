@@ -1,0 +1,15 @@
+HW1 Topics we covered today and why they matter
+
+AWS EC2 Instance: Running an instance in Amazon Web Services(one of largest cloud service platforms) enables us to store files and run codes on cloud. In this way we are using others' hardware instead of our own machines to compute, which may be faster(denpending on the hardware).
+
+Linux: A charming OS. It has clear and powerful shell which can do a lot of things. We covered some basic commands in Linux command shells.
+
+Vim: A text editor in Linux. We covered some basic commands as well, this is a fast text editor(with a lot of shortcuts).
+
+Github: An open website based on Git. Git is basically a version control system, which enables us to record the history of changes. This is extremely important and useful when working in teams.
+
+Shell Scripts: Enables us to integrate a batch of commands(with parameters) and run them repeatedly. This is useful to simulation tasks. 
+
+Pycharm: Maybe the best IDE for Python.
+
+
