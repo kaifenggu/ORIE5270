@@ -1,0 +1,6 @@
+[
+  "hw2_test.py::TestTree::test_get_tree_list1",
+  "hw2_test.py::TestTree::test_get_tree_list2",
+  "hw2_test.py::TestTree::test_get_tree_list3",
+  "hw2_test.py::TestTree::test_get_tree_list4"
+]
