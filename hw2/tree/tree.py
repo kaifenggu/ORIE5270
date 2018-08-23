@@ -7,6 +7,7 @@ class Tree(object):
         """
         self.root = root
 
+    '''
     def get_value_root(self):
         """
         Get the value of the root node
@@ -17,6 +18,7 @@ class Tree(object):
             return self.root.value
         else:
             return None
+    '''
 
     def get_tree_list(self, n):
         """
@@ -39,7 +41,7 @@ class Tree(object):
                 right_branch = self.get_tree_list(n.right)
             if len(left_branch) > len(right_branch):
                 if type(left_branch[0]) == str:
-                    left_width = 1
+                    # left_width = 1
                     right_branch = ["|"]
                 elif type(right_branch[0]) == str:
                     left_width = len(left_branch[0])
@@ -53,11 +55,11 @@ class Tree(object):
                     right_branch = right_branch + [["|"] * left_width] * delta_len
                 else:
                     left_width = len(left_branch[0])
-                    if type(right_branch[0]) == str:
-                        right_width = 1
-                    else:
-                        right_width = len(right_branch[0])
-                    width_delta = int((left_width - right_width) / 2)
+                    # if type(right_branch[0]) == str:
+                    #     right_width = 1
+                    # else:
+                    #     right_width = len(right_branch[0])
+                    # width_delta = int((left_width - right_width) / 2)
                     delta_len = len(left_branch) - len(right_branch)
                     for i in range(len(right_branch)):
                         lis = right_branch[i]
@@ -69,7 +71,7 @@ class Tree(object):
 
             if len(right_branch) > len(left_branch):
                 if type(right_branch[0]) == str:
-                    right_width = 1
+                    # right_width = 1
                     left_branch = ["|"]
                 elif type(left_branch[0]) == str:
                     right_width = len(right_branch[0])
@@ -83,11 +85,11 @@ class Tree(object):
                     left_branch = left_branch + [["|"] * right_width] * delta_len
                 else:
                     right_width = len(right_branch[0])
-                    if type(left_branch[0]) == str:
-                        left_width = 1
-                    else:
-                        left_width = len(left_branch[0])
-                    width_delta = int((right_width - left_width) / 2)
+                    # if type(left_branch[0]) == str:
+                    #     left_width = 1
+                    # else:
+                    #     left_width = len(left_branch[0])
+                    # width_delta = int((right_width - left_width) / 2)
                     delta_len = len(right_branch) - len(left_branch)
                     for i in range(len(left_branch)):
                         lis = left_branch[i]
@@ -122,6 +124,7 @@ class Tree(object):
 
         return treelist
 
+    '''
     def print_tree(self):
         """
         Process to print the tree in a user friendly form
@@ -132,6 +135,7 @@ class Tree(object):
         for i in range(len(treelist)):
             print("\t".join(treelist[i]))
         return
+    '''
 
 
 class Node(object):
@@ -148,6 +152,7 @@ class Node(object):
         self.right = right
 
 
+'''
 if __name__ == '__main__':
     a = Node(1, None, None)
     tree1 = Tree(a)
@@ -196,4 +201,30 @@ if __name__ == '__main__':
     tree4 = Tree(a)
     print(tree4.get_tree_list(a))
 
+    a = Node(1, None, None)
+    b = Node(2, None, None)
+    c = Node(3, None, None)
+    d = Node(4, None, None)
+    e = Node(5, None, None)
+    f = Node(6, None, None)
+    g = Node(7, None, None)
+    h = Node(8, None, None)
+    i = Node(9, None, None)
+    j = Node(10, None, None)
+    k = Node(11, None, None)
+    a.left = b
+    a.right = c
+    b.right = d
+    d.left = e
+    c.left = f
+    c.right = g
+    g.left = h
+    e.right = i
+    b.left = j
+    j.right = k
+    tree4 = Tree(a)
+    print(tree4.get_tree_list(a))
+
+
     tree4.print_tree()
+'''
