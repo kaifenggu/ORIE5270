@@ -1,7 +1,6 @@
 import unittest
-import sys
-sys.path.append('/Users/kgu/PycharmProjects/ORIE5270/ORIE5270/hw2/tree')
-from tree import Tree,Node
+from tree.tree import Tree, Node
+
 
 class TestTree(unittest.TestCase):
 
@@ -73,8 +72,8 @@ class TestTree(unittest.TestCase):
         c.left = f
         c.right = g
         tree4 = Tree(a)
-        expected_list4 = [['|', '|', '|', '|', '|', '|', '|', '1', '|', '|', '|', '|', '|', '|', '|'],
-                         ['|', '|', '|', '2', '|', '|', '|', '|', '|', '|', '|', '3', '|', '|', '|'],
-                         ['|', '|', '|', '|', '|', '4', '|', '|', '|', '6', '|', '|', '|', '7', '|'],
-                         ['|', '|', '|', '|', '5', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|']]
-        assert tree4.get_tree_list(a) == expected_list4
+        exp_list4 = [['|', '|', '|', '|', '|', '|', '|', '1', '|', '|', '|', '|', '|', '|', '|'],
+                     ['|', '|', '|', '2', '|', '|', '|', '|', '|', '|', '|', '3', '|', '|', '|'],
+                     ['|', '|', '|', '|', '|', '4', '|', '|', '|', '6', '|', '|', '|', '7', '|'],
+                     ['|', '|', '|', '|', '5', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|']]
+        assert tree4.get_tree_list(a) == exp_list4

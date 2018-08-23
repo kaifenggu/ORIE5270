@@ -1,1 +1,6 @@
-[]
+[
+  "tests/test_tree.py::TestTree::test_get_tree_list1",
+  "tests/test_tree.py::TestTree::test_get_tree_list2",
+  "tests/test_tree.py::TestTree::test_get_tree_list3",
+  "tests/test_tree.py::TestTree::test_get_tree_list4"
+]

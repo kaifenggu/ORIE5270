@@ -22,13 +22,13 @@ class Tree(object):
         :param n:(Node) a node in the tree
         :return:(list) tree_list
         """
-        if n.left == None and n.right == None:
+        if n.left is None and n.right is None:
             treelist = [str(n.value)]
         else:
-            if n.left == None:
+            if n.left is None:
                 left_branch = ["|"]
                 right_branch = self.get_tree_list(n.right)
-            elif n.right == None:
+            elif n.right is None:
                 left_branch = self.get_tree_list(n.left)
                 right_branch = ["|"]
             else:
