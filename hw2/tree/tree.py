@@ -2,6 +2,7 @@ class Tree(object):
     def __init__(self, root):
         """
         Constructor to initiate a tree object
+
         :param root:(Node) the root node of the tree
         """
         self.root = root
@@ -9,6 +10,7 @@ class Tree(object):
     def get_value_root(self):
         """
         Get the value of the root node
+
         :return:(int/str... or None) self.root.value or None
         """
         if self.root is not None:
@@ -19,6 +21,7 @@ class Tree(object):
     def get_tree_list(self, n):
         """
         Generate the tree in list form
+
         :param n:(Node) a node in the tree
         :return:(list) tree_list
         """
@@ -122,6 +125,7 @@ class Tree(object):
     def print_tree(self):
         """
         Process to print the tree in a user friendly form
+
         :return: None
         """
         treelist = self.get_tree_list(self.root)
@@ -134,6 +138,7 @@ class Node(object):
     def __init__(self, value, left, right):
         """
         Constructor to initiate a Node object
+
         :param value:(str/int/...) value of the node
         :param left:(Node) the left child node of this node
         :param right:(Node) the right child node of this node
