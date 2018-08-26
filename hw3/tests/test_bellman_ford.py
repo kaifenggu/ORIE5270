@@ -10,4 +10,4 @@ class TestBellmanFord(unittest.TestCase):
         assert res1 == []
         name_txt_file2 = 'graph2.txt'
         res2 = find_negative_cycles(name_txt_file2)
-        assert res2 == ['5', '7', '8', '5']
+        assert res2 == [5, 7, 8, 5]

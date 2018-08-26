@@ -1,3 +1,6 @@
+from heapq import heappush, heappop
+
+
 def make_dictionary(text):
     text = text.replace('\n', '')
     text = text.replace('(', '')
@@ -6,7 +9,7 @@ def make_dictionary(text):
     num_out_edges = int(len(text_list)/2)
     out_edges = {}
     for j in range(num_out_edges):
-        out_edges[text_list[2*j]] = int(text_list[2*j+1])
+        out_edges[float(text_list[2*j])] = float(text_list[2*j+1])
     return out_edges
 
 
@@ -16,7 +19,7 @@ def txt_to_graph(filename):
     graph = {}
     num_nodes = int(len(data)/2)
     for i in range(num_nodes):
-        key_node = data[2*i].replace('\n', '')
+        key_node = float(data[2*i].replace('\n', ''))
         point_to = data[2*i+1]
         graph[key_node] = make_dictionary(point_to)
     return graph
@@ -30,21 +33,18 @@ def find_shortest_path(name_txt_file, source, destination):
     graph = txt_to_graph(name_txt_file)
     v = source
     S = set()
-    F = set(v)
     d = {}
     bk = {}
     d[v] = 0
+    F = []
+    heappush(F, (d[v], v))
     while (len(F) > 0):
-        d_F = {}
-        for node in F:
-            d_F[node] = d[node]
-        f = min(d_F, key=d_F.get)
-        F.remove(f)
+        f = heappop(F)[1]
         S.add(f)
         for w in graph[f]:
-            if (w not in S) and (w not in F):
+            if (w not in S) and (w not in set([turple[1] for turple in F])):
                 d[w] = d[f] + wgt(graph, f, w)
-                F.add(w)
+                heappush(F, (d[w], w))
                 bk[w] = f
             elif (d[f] + wgt(graph, f, w) < d[w]):
                 d[w] = d[f] + wgt(graph, f, w)
@@ -62,8 +62,8 @@ def find_shortest_path(name_txt_file, source, destination):
 '''
 if __name__ == '__main__':
     name_txt_file = '../graph1.txt'
-    source = '1'
-    destination = '3'
+    source = 1
+    destination = 3
     res = find_shortest_path(name_txt_file,source,destination)
     print(res)
 '''
