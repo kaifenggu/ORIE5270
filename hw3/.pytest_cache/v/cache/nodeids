@@ -1,0 +1,4 @@
+[
+  "tests/test_bellman_ford.py::TestBellmanFord::test_bellman_ford",
+  "tests/test_dijkstra.py::TestDijkstra::test_dijkstra"
+]
