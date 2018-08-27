@@ -56,14 +56,14 @@ def find_shortest_path(name_txt_file, source, destination):
         n_back = bk[n_back]
         shortest_path.append(n_back)
     shortest_path.reverse()
-    return n_back, shortest_path
+    return d[destination], shortest_path
 
 
 '''
 if __name__ == '__main__':
     name_txt_file = '../graph1.txt'
-    source = 1
-    destination = 3
+    source = 1.0
+    destination = 4.0
     res = find_shortest_path(name_txt_file,source,destination)
     print(res)
 '''
